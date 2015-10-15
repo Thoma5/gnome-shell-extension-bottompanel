@@ -4,7 +4,7 @@ Move your GNOME 3.16 and 3.18 shell panel to the bottom
 ## To Use:
 ```
 git clone https://github.com/Thoma5/gnome-shell-extension-bottompanel.git
-cp gnome-shell-extension-bottompanel ~/.local/share/gnome-shell/extensions/bottompanel@tmoer93
+cp -r gnome-shell-extension-bottompanel ~/.local/share/gnome-shell/extensions/bottompanel@tmoer93
 ```
 And activate it in the gnome-tweak-tool under extensions.
 
