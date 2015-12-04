@@ -14,3 +14,6 @@ https://extensions.gnome.org/extension/358/activities-configurator/
 ## Known issues:
 + Sometimes strange context menu behavior for legacy tray icons when topicon extension is activated (not showing up, Workaround: deactivating/activating the topicon extension or using the GNOME 3.16/3.18 standard for legacy tray icons)
 + The panel bubble (e.g. Gnome global menu, date etc.) is placed about 10 px too high-- probably fixable
+
+## Thanks to:
+https://github.com/tuxor1337 for code cleanup and adding multi-monitor support
