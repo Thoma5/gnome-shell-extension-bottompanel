@@ -1,29 +1,28 @@
 
 const Main = imports.ui.main;
+const PanelBox = Main.layoutManager.panelBox;
 
-let bottom=false;
-let monitor,pB, button;
+let MonitorsChangedListener = null;
 
 function _toTop() {
-    pB.set_anchor_point(0,0);
-    bottom=false;
+    PanelBox.set_anchor_point(0,0);
 }
 
 function _toBottom() {
-    pB.set_anchor_point(0,(-1)*(monitor.height-pB.get_height()));
-    bottom=true;
+    let monitor = Main.layoutManager.primaryMonitor;
+    PanelBox.set_anchor_point(0,(-1)*(monitor.height-PanelBox.height));
 }
 
-
-function init() {
-    monitor = Main.layoutManager.primaryMonitor;
-    pB=Main.layoutManager.panelBox;
-}
+function init() { }
 
 function enable() {
+    MonitorsChangedListener = global.screen.connect("monitors-changed", _toBottom);
     _toBottom();
 }
 
 function disable() {
+    if(MonitorsChangedListener !== null) {
+        global.screen.disconnect(MonitorsChangedListener);
+    }
     _toTop();
 }
