@@ -3,6 +3,7 @@ const Main = imports.ui.main;
 const PanelBox = Main.layoutManager.panelBox;
 
 let MonitorsChangedListener = null;
+let HeightNotifyListener = null;
 
 function _toTop() {
     PanelBox.set_anchor_point(0,0);
@@ -17,10 +18,14 @@ function init() { }
 
 function enable() {
     MonitorsChangedListener = global.screen.connect("monitors-changed", _toBottom);
+    HeightNotifyListener = PanelBox.connect("notify::height", _toBottom);
     _toBottom();
 }
 
 function disable() {
+    if(HeightNotifyListener !== null) {
+        PanelBox.disconnect(HeightNotifyListener);
+    }
     if(MonitorsChangedListener !== null) {
         global.screen.disconnect(MonitorsChangedListener);
     }
