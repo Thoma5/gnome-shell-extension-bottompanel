@@ -10,6 +10,8 @@ And activate it in the gnome-tweak-tool under extensions.
 
 For transparency use this extension:
 https://extensions.gnome.org/extension/358/activities-configurator/
+## Planned Features:
++ Settings to configure the panel
 
 ## Known issues:
 + Sometimes strange context menu behavior for legacy tray icons when topicon extension is activated (not showing up, Workaround: deactivating/activating the topicon extension or using the GNOME 3.16/3.18 standard for legacy tray icons)
