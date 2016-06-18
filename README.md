@@ -20,3 +20,4 @@ https://extensions.gnome.org/extension/358/activities-configurator/
 
 ## Thanks to:
 https://github.com/tuxor1337 for code cleanup and adding multi-monitor support
+https://github.com/achadwick for fixing some glitches related to panel height
