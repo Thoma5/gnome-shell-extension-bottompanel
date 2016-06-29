@@ -14,7 +14,7 @@ https://extensions.gnome.org/extension/358/activities-configurator/
 + Settings to configure the panel
 
 ## Known issues:
-+ Need to restart, tu fully enable this extension (Alt+F2 , type "r" and press enter)
++ Need to restart the shell for full functionality (Alt+F2 , type "r" and press enter)
 + Sometimes strange context menu behavior for legacy tray icons when topicon extension is activated (not showing up, Workaround: deactivating/activating the topicon extension or using the GNOME 3.16/3.18 standard for legacy tray icons)
 + Strange window behaviour if you try to move a snapped window by dragging from the panel --probably not fixable without patches on mutter
 
