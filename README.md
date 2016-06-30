@@ -19,6 +19,6 @@ https://extensions.gnome.org/extension/358/activities-configurator/
 + Strange window behaviour if you try to move a snapped window by dragging from the panel --probably not fixable without patches on mutter
 
 ## Thanks to:
-https://github.com/tuxor1337 for code cleanup and adding multi-monitor support
-https://github.com/achadwick for fixing some glitches related to panel height
-https://github.com/robbiewxyz for a hint, to use css to fix the gap issue
+https://github.com/tuxor1337 for code cleanup and adding multi-monitor support.
+https://github.com/achadwick for fixing some glitches related to panel height.
+https://github.com/robbiewxyz for a hint, to use css to fix the gap issue.
