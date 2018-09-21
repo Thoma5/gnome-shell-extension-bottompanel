@@ -22,3 +22,4 @@ https://extensions.gnome.org/extension/358/activities-configurator/
 github.com/tuxor1337 for code cleanup and adding multi-monitor support.
 github.com/achadwick for fixing some glitches related to panel height.
 github.com/robbiewxyz for a hint, to use css to fix the gap issue.
+squalou.jenkins@gmail.com  for the Main.layoutManager.connect fix.

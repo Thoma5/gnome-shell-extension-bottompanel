@@ -17,7 +17,7 @@ function _toBottom() {
 function init() { }
 
 function enable() {
-    MonitorsChangedListener = global.screen.connect("monitors-changed", _toBottom);
+    MonitorsChangedListener = Main.layoutManager.connect("monitors-changed", _toBottom);
     HeightNotifyListener = PanelBox.connect("notify::height", _toBottom);
     _toBottom();
     Main.panel.actor.add_style_class_name("popup-menu");
@@ -28,7 +28,7 @@ function disable() {
         PanelBox.disconnect(HeightNotifyListener);
     }
     if(MonitorsChangedListener !== null) {
-        global.screen.disconnect(MonitorsChangedListener);
+        Main.layoutManager.disconnect(MonitorsChangedListener);
     }
     _toTop();
     Main.panel.actor.remove_style_class_name("popup-menu");
