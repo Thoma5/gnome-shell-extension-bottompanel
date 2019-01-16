@@ -1,5 +1,5 @@
 # gnome-shell-extension-bottompanel
-Move your GNOME 3.16 - 3.2x shell panel to the bottom
+Move your GNOME 3.16 - 3.3x shell panel to the bottom
 
 ## To Use:
 ```
@@ -10,8 +10,6 @@ And activate it in the gnome-tweak-tool under extensions.
 
 For transparency use this extension:
 https://extensions.gnome.org/extension/358/activities-configurator/
-## Planned Features:
-+ Settings to configure the panel
 
 ## Known issues:
 + Need to restart the shell for full functionality (Alt+F2 , type "r" and press enter)

@@ -1,16 +1,43 @@
 
 const Main = imports.ui.main;
+const Meta = imports.gi.Meta;
 const PanelBox = Main.layoutManager.panelBox;
 
 let MonitorsChangedListener = null;
 let HeightNotifyListener = null;
+let rightPanelBarrier = null;
 
 function _toTop() {
-    PanelBox.set_anchor_point(0,0);
+   let monitor = Main.layoutManager.primaryMonitor; 
+   if (this.rightPanelBarrier) {
+        this.rightPanelBarrier.destroy()
+   }
+   this.rightPanelBarrier = new Meta.Barrier({
+       display: global.display,
+       x1: monitor.width, 
+       x2: monitor.width, 
+       y1: PanelBox.height, 
+       y2: 0, 
+       directions: Meta.BarrierDirection.NEGATIVE_Y
+   });
+   PanelBox.set_anchor_point(0,0);
 }
 
 function _toBottom() {
     let monitor = Main.layoutManager.primaryMonitor;
+    if (this.rightPanelBarrier) {
+        this.rightPanelBarrier.destroy()
+    }
+    this.rightPanelBarrier = new Meta.Barrier({
+        display: global.display, 
+        x1: monitor.width, 
+        x2: monitor.width, 
+        y1: monitor.height - PanelBox.height, 
+        y2: monitor.height,
+        directions: Meta.BarrierDirection.NEGATIVE_Y
+    });
+    // TODO: find a way to replace the rightPanelBarrier instead of destroying
+    Main.layoutManager._rightPanelBarrier.destroy()
     PanelBox.set_anchor_point(0,(-1)*(monitor.height-PanelBox.height));
 }
 
