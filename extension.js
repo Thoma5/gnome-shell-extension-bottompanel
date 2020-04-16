@@ -37,7 +37,9 @@ function _toBottom() {
         directions: Meta.BarrierDirection.NEGATIVE_Y
     });
     // TODO: find a way to replace the rightPanelBarrier instead of destroying
-    Main.layoutManager._rightPanelBarrier.destroy()
+    if (Main.layoutManager._rightPanelBarrier) {
+        Main.layoutManager._rightPanelBarrier.destroy()
+    }
     PanelBox.set_anchor_point(0,(-1)*(monitor.height-PanelBox.height));
 }
 
