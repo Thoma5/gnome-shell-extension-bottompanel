@@ -19,8 +19,9 @@ function _toTop() {
        y1: PanelBox.height, 
        y2: 0, 
        directions: Meta.BarrierDirection.NEGATIVE_Y
-   });
-   PanelBox.set_anchor_point(0,0);
+   });    
+   PanelBox.set_pivot_point(0,0);
+   PanelBox.set_position(0,0);
 }
 
 function _toBottom() {
@@ -40,7 +41,8 @@ function _toBottom() {
     if (Main.layoutManager._rightPanelBarrier) {
         Main.layoutManager._rightPanelBarrier.destroy()
     }
-    PanelBox.set_anchor_point(0,(-1)*(monitor.height-PanelBox.height));
+    PanelBox.set_pivot_point(0,(-1)*(monitor.height-PanelBox.height));
+    PanelBox.set_position(0,(monitor.height-PanelBox.height));
 }
 
 function init() { }
